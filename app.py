@@ -10,6 +10,9 @@ import os
 # Crear la aplicación Dash
 app = Dash(__name__, title="ImageNet Analyzer")
 
+# Declare server for Heroku deployment. Needed for Procfile.
+server = app.server
+
 # Obtener la lista de imágenes en la carpeta assets
 image_folder = 'assets/images/'
 image_files = get_image_files(image_folder)

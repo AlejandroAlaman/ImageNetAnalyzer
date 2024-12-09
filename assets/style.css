@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e2e2e;  /* Fondo oscuro */
+    color: #f0f0f0;  /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3, h4 {
+    font-family: 'Helvetica', sans-serif;
+    color: #81a1c1;  /* Títulos en tono azul suave */
+}
+
+/* Header */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Section Titles */
+h3, h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #88c0d0;  /* Azul claro para secciones */
+    margin-bottom: 10px;
+}
+
+/* Layout */
+div {
+    margin-bottom: 30px;
+}
+
+/* Image Gallery */
+#image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#image-gallery div {
+    cursor: pointer;
+}
+
+#image-gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #4c566a;  /* Bordes sutiles alrededor de las imágenes */
+}
+
+#image-gallery img:hover {
+    transform: scale(1.1);
+    border-color: #81a1c1;  /* Cambiar el borde cuando se pasa el cursor */
+}
+
+/* Processed Image */
+#processed-image {
+    max-width: 60%;
+    border: 3px solid #4c566a;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Predicted Classes */
+#predicted-classes {
+    font-size: 18px;
+    color: #f0f0f0;  /* Texto claro */
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Graph Styling */
+.dccGraph {
+    margin-top: 30px;
+}
+
+#probability-graph {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #3b4048;  /* Fondo oscuro para las gráficas */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Entropy Value */
+#entropy-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f28f00;  /* Entropía en color naranja para destacarse */
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    background-color: #81a1c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #5e81ac;  /* Fondo de botón más oscuro al pasar el cursor */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #processed-image {
+        width: 80%;
+    }
+
+    #image-gallery {
+        justify-content: center;
+    }
+
+    .dccGraph {
+        width: 100%;
+    }
+
+    #probability-graph {
+        width: 100%;
+    }
+}
